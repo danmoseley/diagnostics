@@ -399,13 +399,13 @@ namespace Microsoft.Diagnostics.Tools.Trace
         private static string GetSize(long length)
         {
             if (length > 1e9)
-                return String.Format("{0,-8} (GB)", $"{length / 1e9:0.000}");
+                return String.Format("{0,8} (GB)", $"{length / 1e9:0.000}");
             else if (length > 1e6)
-                return String.Format("{0,-8} (MB)", $"{length / 1e6:0.000}");
+                return String.Format("{0,8} (MB)", $"{length / 1e6:0.000}");
             else if (length > 1e3)
-                return String.Format("{0,-8} (KB)", $"{length / 1e3:0.000}");
+                return String.Format("{0,8} (KB)", $"{length / 1e3:0.000}");
             else
-                return String.Format("{0,-8} (B)", $"{length / 1.0:0.000}");
+                return String.Format("{0,8} (B)", $"{length / 1.0:0.000}");
         }
 
         public static Command CollectCommand() =>
